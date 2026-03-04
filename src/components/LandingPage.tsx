@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PricingSection from './PricingSection';
 
 interface LandingPageProps {
   onLoginClick: () => void;
@@ -30,7 +31,7 @@ export default function LandingPage({ onLoginClick }: LandingPageProps) {
           </h1>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a data-aos="fade-down" data-aos-delay="100" href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors uppercase tracking-widest">Planos</a>
+            <a data-aos="fade-down" data-aos-delay="100" href="#planos" className="text-sm font-medium hover:text-indigo-600 transition-colors uppercase tracking-widest">Planos</a>
             <a data-aos="fade-down" data-aos-delay="200" href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors uppercase tracking-widest">Sobre</a>
             <a data-aos="fade-down" data-aos-delay="300" href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors uppercase tracking-widest">Downloads</a>
             <a data-aos="fade-down" data-aos-delay="400" href="#" className="text-sm font-medium hover:text-indigo-600 transition-colors uppercase tracking-widest">Profissionais</a>
@@ -81,6 +82,8 @@ export default function LandingPage({ onLoginClick }: LandingPageProps) {
           </div>
         </main>
       </div>
+
+      <PricingSection />
 
       {/* Footer / Extra Decoration */}
       <div className="absolute bottom-12 left-12 hidden lg:block">
